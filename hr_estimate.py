@@ -6,7 +6,7 @@ class mechanical(osv.Model):
 	def _gap_lead(self,cr,uid,ids,field_name,arg,context=None):
 		res = {}
 		for i in self.browse(cr,uid,ids,context=context):
-			res[i.id] = i.projected_lead - i.optimal_lead
+			res[i.id] = i.projected_lead - i.x_lead_system_me_load
 		return res
 
 	def _gap_senior(self,cr,uid,ids,field_name,arg,context=None):
@@ -27,7 +27,7 @@ class mechanical(osv.Model):
 			('High','High'),
 			('Medium','Medium'),
 			('Low','Low')],'Project functional complexity ',required=True),
-		'optimal_lead' : fields.float('Optimal Lead'),
+		'x_lead_system_me_load' : fields.related('project_id','x_lead_system_me_load',type='float',string='Optimal Lead',readonly=True),
 		'optimal_senior' : fields.float('Optimal Senior'),
 		'optimal_junior' : fields.float('Optimal Junior'),
 		'projected_lead' : fields.float('Projected Lead'),
@@ -45,7 +45,7 @@ class electronic(osv.Model):
 	def _gap_lead(self,cr,uid,ids,field_name,arg,context=None):
 		res = {}
 		for i in self.browse(cr,uid,ids,context=context):
-			res[i.id] = i.projected_lead - i.optimal_lead
+			res[i.id] = i.projected_lead - i.x_lead_ee_load
 		return res
 
 	def _gap_senior(self,cr,uid,ids,field_name,arg,context=None):
@@ -66,7 +66,7 @@ class electronic(osv.Model):
 			('High','High'),
 			('Medium','Medium'),
 			('Low','Low')],'Project functional complexity ',required=True),
-		'optimal_lead' : fields.float('Optimal Lead'),
+		'x_lead_ee_load' : fields.related('project_id','x_lead_ee_load',type='float',readonly=True,string='Optimal Lead'),
 		'optimal_senior' : fields.float('Optimal Senior'),
 		'optimal_junior' : fields.float('Optimal Junior'),
 		'projected_lead' : fields.float('Projected Lead'),
@@ -84,7 +84,7 @@ class system(osv.Model):
 	def _gap_lead(self,cr,uid,ids,field_name,arg,context=None):
 		res = {}
 		for i in self.browse(cr,uid,ids,context=context):
-			res[i.id] = i.projected_lead - i.optimal_lead
+			res[i.id] = i.projected_lead - i.x_lead_se_load
 		return res
 
 	def _gap_senior(self,cr,uid,ids,field_name,arg,context=None):
@@ -105,7 +105,7 @@ class system(osv.Model):
 			('High','High'),
 			('Medium','Medium'),
 			('Low','Low')],'Project functional complexity ',required=True),
-		'optimal_lead' : fields.float('Optimal Lead'),
+		'x_lead_se_load' : fields.related('project_id','x_lead_se_load',type='float',readonly=True,string='Optimal Lead'),
 		'optimal_senior' : fields.float('Optimal Senior'),
 		'optimal_junior' : fields.float('Optimal Junior'),
 		'projected_lead' : fields.float('Projected Lead'),
@@ -123,7 +123,7 @@ class software(osv.Model):
 	def _gap_lead(self,cr,uid,ids,field_name,arg,context=None):
 		res = {}
 		for i in self.browse(cr,uid,ids,context=context):
-			res[i.id] = i.projected_lead - i.optimal_lead
+			res[i.id] = i.projected_lead - i.x_lead_swe_load
 		return res
 
 	def _gap_senior(self,cr,uid,ids,field_name,arg,context=None):
@@ -144,7 +144,7 @@ class software(osv.Model):
 			('High','High'),
 			('Medium','Medium'),
 			('Low','Low')],'Project functional complexity ',required=True),
-		'optimal_lead' : fields.float('Optimal Lead'),
+		'x_lead_swe_load' : fields.related('project_id','x_lead_swe_load',type='float',readonly=True,string='Optimal Lead'),
 		'optimal_senior' : fields.float('Optimal Senior'),
 		'optimal_junior' : fields.float('Optimal Junior'),
 		'projected_lead' : fields.float('Projected Lead'),
