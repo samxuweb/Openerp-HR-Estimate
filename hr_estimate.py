@@ -22,11 +22,11 @@ class mechanical(osv.Model):
 		return res
 
 	_columns = {
-		'project_id' : fields.many2one('project.project','Project'),
+		'project_id' : fields.many2one('project.project','Project',required=True),
 		'project_complexity' : fields.selection([
 			('High','High'),
 			('Medium','Medium'),
-			('Low','Low')],'Project functional complexity '),
+			('Low','Low')],'Project functional complexity ',required=True),
 		'optimal_lead' : fields.float('Optimal Lead'),
 		'optimal_senior' : fields.float('Optimal Senior'),
 		'optimal_junior' : fields.float('Optimal Junior'),
@@ -61,11 +61,11 @@ class electronic(osv.Model):
 		return res
 
 	_columns = {
-		'project_id' : fields.many2one('project.project','Project'),
+		'project_id' : fields.many2one('project.project','Project',required=True),
 		'project_complexity' : fields.selection([
 			('High','High'),
 			('Medium','Medium'),
-			('Low','Low')],'Project functional complexity '),
+			('Low','Low')],'Project functional complexity ',required=True),
 		'optimal_lead' : fields.float('Optimal Lead'),
 		'optimal_senior' : fields.float('Optimal Senior'),
 		'optimal_junior' : fields.float('Optimal Junior'),
@@ -100,11 +100,11 @@ class system(osv.Model):
 		return res
 
 	_columns = {
-		'project_id' : fields.many2one('project.project','Project'),
+		'project_id' : fields.many2one('project.project','Project',required=True),
 		'project_complexity' : fields.selection([
 			('High','High'),
 			('Medium','Medium'),
-			('Low','Low')],'Project functional complexity '),
+			('Low','Low')],'Project functional complexity ',required=True),
 		'optimal_lead' : fields.float('Optimal Lead'),
 		'optimal_senior' : fields.float('Optimal Senior'),
 		'optimal_junior' : fields.float('Optimal Junior'),
@@ -139,11 +139,11 @@ class software(osv.Model):
 		return res
 
 	_columns = {
-		'project_id' : fields.many2one('project.project','Project'),
+		'project_id' : fields.many2one('project.project','Project',required=True),
 		'project_complexity' : fields.selection([
 			('High','High'),
 			('Medium','Medium'),
-			('Low','Low')],'Project functional complexity '),
+			('Low','Low')],'Project functional complexity ',required=True),
 		'optimal_lead' : fields.float('Optimal Lead'),
 		'optimal_senior' : fields.float('Optimal Senior'),
 		'optimal_junior' : fields.float('Optimal Junior'),
@@ -178,11 +178,11 @@ class tpl(osv.Model):
 		return res
 
 	_columns = {
-		'project_id' : fields.many2one('project.project','Project'),
+		'project_id' : fields.many2one('project.project','Project',required=True),
 		'project_complexity' : fields.selection([
 			('High','High'),
 			('Medium','Medium'),
-			('Low','Low')],'Project functional complexity '),
+			('Low','Low')],'Project functional complexity ',required=True),
 		'optimal_lead' : fields.float('Optimal Lead'),
 		'optimal_senior' : fields.float('Optimal Senior'),
 		'optimal_junior' : fields.float('Optimal Junior'),
