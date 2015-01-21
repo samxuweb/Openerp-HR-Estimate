@@ -22,7 +22,7 @@
 					</group>
 					<group string="Optimal Resource Allocation">
 					  <field name="optimal_lead" />
-					  <field name="optimal_senior" />
+					  <field name="x_system_me_load" />
 					  <field name="optimal_junior" />
 					</group>
 					<group string="Projected Resource Allocation">
@@ -48,7 +48,7 @@
 				<field name="project_complexity" />
 				<field name="remaining_duration" />
                 <field name="optimal_lead" sum="optimal_lead"/>
-				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="x_system_me_load" sum="x_system_me_load"/>
 				<field name="optimal_junior" sum="optimal_junior"/>
 				<field name="projected_lead" sum="projected_lead"/>
 				<field name="projected_senior" sum="projected_senior"/>
@@ -82,7 +82,7 @@
 					</group>
 					<group string="Optimal Resource Allocation">
 					  <field name="optimal_lead" />
-					  <field name="optimal_senior" />
+					  <field name="x_ee_load" />
 					  <field name="optimal_junior" />
 					</group>
 				    <group string="Projected Resource Allocation">
@@ -108,7 +108,7 @@
 				<field name="project_complexity" />
 				<field name="remaining_duration" />
                 <field name="optimal_lead" sum="optimal_lead"/>
-				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="x_ee_load" sum="x_ee_load"/>
 				<field name="optimal_junior" sum="optimal_junior"/>
 				<field name="projected_lead" sum="projected_lead"/>
 				<field name="projected_senior" sum="projected_senior"/>
@@ -142,7 +142,7 @@
 					</group>
 					<group string="Optimal Resource Allocation">
 					  <field name="optimal_lead" />
-					  <field name="optimal_senior" />
+					  <field name="x_se_load" />
 					  <field name="optimal_junior" />
 					</group>
 					<group string="Projected Resource Allocation">
@@ -168,7 +168,7 @@
 				<field name="project_complexity" />
 				<field name="remaining_duration" />
                 <field name="optimal_lead" sum="optimal_lead"/>
-				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="x_se_load" sum="x_se_load"/>
 				<field name="optimal_junior" sum="optimal_junior"/>
 				<field name="projected_lead" sum="projected_lead"/>
 				<field name="projected_senior" sum="projected_senior"/>
@@ -202,7 +202,7 @@
 					</group>
 					<group string="Optimal Resource Allocation">
 					  <field name="optimal_lead" />
-					  <field name="optimal_senior" />
+					  <field name="x_swe_load" />
 					  <field name="optimal_junior" />
 					</group>
 					<group string="Projected Resource Allocation">
@@ -228,7 +228,7 @@
 				<field name="project_complexity" />
 				<field name="remaining_duration" />
                 <field name="optimal_lead" sum="optimal_lead"/>
-				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="x_swe_load" sum="x_swe_load"/>
 				<field name="optimal_junior" sum="optimal_junior"/>
 				<field name="projected_lead" sum="projected_lead"/>
 				<field name="projected_senior" sum="projected_senior"/>
@@ -262,7 +262,7 @@
 					</group>
 					<group string="Optimal Resource Allocation">
 					  <field name="optimal_lead" />
-					  <field name="optimal_senior" />
+					  <field name="x_lead_se_load" />
 					  <field name="optimal_junior" />
 					</group>
 					<group string="Projected Resource Allocation">
@@ -288,7 +288,7 @@
 				<field name="project_complexity" />
 				<field name="remaining_duration" />
                 <field name="optimal_lead" sum="optimal_lead"/>
-				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="x_lead_se_load" sum="x_lead_se_load"/>
 				<field name="optimal_junior" sum="optimal_junior"/>
 				<field name="projected_lead" sum="projected_lead"/>
 				<field name="projected_senior" sum="projected_senior"/>
