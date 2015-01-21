@@ -2,12 +2,12 @@
 	'name' : "Project Management",
 	'category' : "Test",
 	'version' : "1.0",
-	'depends' : ['base'],
-	'author' : "Sam Xu",
+	'depends' : ['base','project'],
+	'author' : "Sam Xu and Frank Liang",
 
 	'description' : "",
 
 	'data' : [
-		'view/hrestimate.xml',
+		'view/hr_estimate.xml',
 	],
 }

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="mechanical_list_action">
+			<field name="name">Project Management</field>
+			<field name="res_model">mechanical</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first HR estimate</p>
+			</field>
+		</record>
+	    <record model="ir.ui.view" id="mechanical_form_view">
+			<field name="name">mechanical.form</field>
+			<field name="model">mechanical</field>
+			<field name="arch" type="xml">
+				<form string="Mechanical">
+					<group string="Project Information">
+					  <field name="project_id"/>
+					  <field name="project_complexity" />
+					  <field name="remaining_duration" />
+					</group>
+					<group string="Optimal Resource Allocation">
+					  <field name="optimal_lead" />
+					  <field name="optimal_senior" />
+					  <field name="optimal_junior" />
+					</group>
+					<group string="Projected Resource Allocation">
+                      <field name="projected_lead" />
+					  <field name="projected_senior" />
+					  <field name="projected_junior" />
+					</group>
+					<group string="Gap">
+					  <field name="gap_lead" />
+					  <field name="gap_senior" />
+					  <field name="gap_junior" />
+					</group>   
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="mechanical_tree_view">
+            <field name="name">mechanical.tree</field>
+            <field name="model">mechanical</field>
+            <field name="arch" type="xml">
+              <tree string="Main Tree" version="7.0" editable="top">
+              	<field name="project_id"/>
+				<field name="project_complexity" />
+				<field name="remaining_duration" />
+                <field name="optimal_lead" sum="optimal_lead"/>
+				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="optimal_junior" sum="optimal_junior"/>
+				<field name="projected_lead" sum="projected_lead"/>
+				<field name="projected_senior" sum="projected_senior"/>
+				<field name="projected_junior" sum="projected_junior"/>
+				<field name="gap_lead" sum="gap_lead"/>
+				<field name="gap_senior" sum="gap_senior"/>
+				<field name="gap_junior" sum="gap_junior"/>
+              </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="electronic_list_action">
+			<field name="name">Project Management</field>
+			<field name="res_model">electronic</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first HR estimate</p>
+			</field>
+		</record>
+
+	    <record model="ir.ui.view" id="electronic_form_view">
+			<field name="name">electronic.form</field>
+			<field name="model">electronic</field>
+			<field name="arch" type="xml">
+				<form string="Electronic">
+					<group string="Project Information">
+					  <field name="project_id"/>
+					  <field name="project_complexity" />
+					  <field name="remaining_duration" />
+					</group>
+					<group string="Optimal Resource Allocation">
+					  <field name="optimal_lead" />
+					  <field name="optimal_senior" />
+					  <field name="optimal_junior" />
+					</group>
+				    <group string="Projected Resource Allocation">
+                      <field name="projected_lead" />
+					  <field name="projected_senior" />
+					  <field name="projected_junior" />
+					</group>
+					<group string="Gap">
+					  <field name="gap_lead" />
+					  <field name="gap_senior" />
+					  <field name="gap_junior" />
+					</group>     
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="electronic_tree_view">
+            <field name="name">electronic.tree</field>
+            <field name="model">electronic</field>
+            <field name="arch" type="xml">
+              <tree string="Main Tree" version="7.0" editable="top">
+              	<field name="project_id"/>
+				<field name="project_complexity" />
+				<field name="remaining_duration" />
+                <field name="optimal_lead" sum="optimal_lead"/>
+				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="optimal_junior" sum="optimal_junior"/>
+				<field name="projected_lead" sum="projected_lead"/>
+				<field name="projected_senior" sum="projected_senior"/>
+				<field name="projected_junior" sum="projected_junior"/>
+				<field name="gap_lead" sum="gap_lead"/>
+				<field name="gap_senior" sum="gap_senior"/>
+				<field name="gap_junior" sum="gap_junior"/>
+              </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="system_list_action">
+			<field name="name">Project Management</field>
+			<field name="res_model">system</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first HR estimate</p>
+			</field>
+		</record>
+
+	    <record model="ir.ui.view" id="system_form_view">
+			<field name="name">system.form</field>
+			<field name="model">system</field>
+			<field name="arch" type="xml">
+				<form string="System">
+					<group string="Project Information">
+					  <field name="project_id"/>
+					  <field name="project_complexity" />
+					  <field name="remaining_duration" />
+					</group>
+					<group string="Optimal Resource Allocation">
+					  <field name="optimal_lead" />
+					  <field name="optimal_senior" />
+					  <field name="optimal_junior" />
+					</group>
+					<group string="Projected Resource Allocation">
+                      <field name="projected_lead" />
+					  <field name="projected_senior" />
+					  <field name="projected_junior" />
+					</group>
+					<group string="Gap">
+					  <field name="gap_lead" />
+					  <field name="gap_senior" />
+					  <field name="gap_junior" />
+					</group>     
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="system_tree_view">
+            <field name="name">system.tree</field>
+            <field name="model">system</field>
+            <field name="arch" type="xml">
+              <tree string="Main Tree" version="7.0" editable="top">
+              	<field name="project_id"/>
+				<field name="project_complexity" />
+				<field name="remaining_duration" />
+                <field name="optimal_lead" sum="optimal_lead"/>
+				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="optimal_junior" sum="optimal_junior"/>
+				<field name="projected_lead" sum="projected_lead"/>
+				<field name="projected_senior" sum="projected_senior"/>
+				<field name="projected_junior" sum="projected_junior"/>
+				<field name="gap_lead" sum="gap_lead"/>
+				<field name="gap_senior" sum="gap_senior"/>
+				<field name="gap_junior" sum="gap_junior"/>
+              </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="software_list_action">
+			<field name="name">Project Management</field>
+			<field name="res_model">software</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first HR estimate</p>
+			</field>
+		</record>
+
+	    <record model="ir.ui.view" id="software_form_view">
+			<field name="name">software.form</field>
+			<field name="model">software</field>
+			<field name="arch" type="xml">
+				<form string="Software">
+					<group string="Project Information">
+					  <field name="project_id"/>
+					  <field name="project_complexity" />
+					  <field name="remaining_duration" />
+					</group>
+					<group string="Optimal Resource Allocation">
+					  <field name="optimal_lead" />
+					  <field name="optimal_senior" />
+					  <field name="optimal_junior" />
+					</group>
+					<group string="Projected Resource Allocation">
+                      <field name="projected_lead" />
+					  <field name="projected_senior" />
+					  <field name="projected_junior" />
+					</group>
+					<group string="Gap">
+					  <field name="gap_lead" />
+					  <field name="gap_senior" />
+					  <field name="gap_junior" />
+					</group>     
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="software_tree_view">
+            <field name="name">software.tree</field>
+            <field name="model">software</field>
+            <field name="arch" type="xml">
+              <tree string="Main Tree" version="7.0" editable="top">
+              	<field name="project_id"/>
+				<field name="project_complexity" />
+				<field name="remaining_duration" />
+                <field name="optimal_lead" sum="optimal_lead"/>
+				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="optimal_junior" sum="optimal_junior"/>
+				<field name="projected_lead" sum="projected_lead"/>
+				<field name="projected_senior" sum="projected_senior"/>
+				<field name="projected_junior" sum="projected_junior"/>
+				<field name="gap_lead" sum="gap_lead"/>
+				<field name="gap_senior" sum="gap_senior"/>
+				<field name="gap_junior" sum="gap_junior"/>
+              </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="tpl_list_action">
+			<field name="name">Project Management</field>
+			<field name="res_model">tpl</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create the first HR estimate</p>
+			</field>
+		</record>
+
+	    <record model="ir.ui.view" id="tpl_form_view">
+			<field name="name">tpl.form</field>
+			<field name="model">tpl</field>
+			<field name="arch" type="xml">
+				<form string="TPL">
+					<group string="Project Information">
+					  <field name="project_id"/>
+					  <field name="project_complexity" />
+					  <field name="remaining_duration" />
+					</group>
+					<group string="Optimal Resource Allocation">
+					  <field name="optimal_lead" />
+					  <field name="optimal_senior" />
+					  <field name="optimal_junior" />
+					</group>
+					<group string="Projected Resource Allocation">
+                      <field name="projected_lead" />
+					  <field name="projected_senior" />
+					  <field name="projected_junior" />
+					</group>
+					<group string="Gap">
+					  <field name="gap_lead" />
+					  <field name="gap_senior" />
+					  <field name="gap_junior" />
+					</group>     
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="tpl_tree_view">
+            <field name="name">tpl.tree</field>
+            <field name="model">tpl</field>
+            <field name="arch" type="xml">
+              <tree string="Main Tree" version="7.0" editable="top">
+              	<field name="project_id"/>
+				<field name="project_complexity" />
+				<field name="remaining_duration" />
+                <field name="optimal_lead" sum="optimal_lead"/>
+				<field name="optimal_senior" sum="optimal_senior"/>
+				<field name="optimal_junior" sum="optimal_junior"/>
+				<field name="projected_lead" sum="projected_lead"/>
+				<field name="projected_senior" sum="projected_senior"/>
+				<field name="projected_junior" sum="projected_junior"/>
+				<field name="gap_lead" sum="gap_lead"/>
+				<field name="gap_senior" sum="gap_senior"/>
+				<field name="gap_junior" sum="gap_junior"/>
+              </tree>
+            </field>
+        </record>
+
+		<menuitem id="main_hr_estimate_menu" name="HR Estimate" />
+		<menuitem id="hr_estimate_menu" name="HR Estimate" parent="main_hr_estimate_menu" />
+		<menuitem id="me_menu" name="Mechanical Engineer" parent="hr_estimate_menu" action="mechanical_list_action" />
+		<menuitem id="ee_menu" name="Eletronic Engineer" parent="hr_estimate_menu" action="electronic_list_action" />
+		<menuitem id="se_menu" name="System Engineer" parent="hr_estimate_menu" action="system_list_action" />
+		<menuitem id="sw_menu" name="Software Engineer" parent="hr_estimate_menu" action="software_list_action" />
+		<menuitem id="tpl_menu" name="TPL" parent="hr_estimate_menu" action="tpl_list_action" />
+	</data>
+</openerp>
