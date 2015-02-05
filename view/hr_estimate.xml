@@ -17,6 +17,7 @@
 				<form string="Mechanical">
 					<group string="Project Information">
 					  <field name="project_id"/>
+					  <field name="x_process_type" invisible="1"/>
 					  <field name="project_complexity" />
 					  <field name="remaining_duration" />
 					</group>
@@ -77,6 +78,7 @@
 				<form string="Electronic">
 					<group string="Project Information">
 					  <field name="project_id"/>
+					  <field name="x_process_type" invisible="1"/>
 					  <field name="project_complexity" />
 					  <field name="remaining_duration" />
 					</group>
@@ -137,6 +139,7 @@
 				<form string="System">
 					<group string="Project Information">
 					  <field name="project_id"/>
+					  <field name="x_process_type" invisible="1"/>
 					  <field name="project_complexity" />
 					  <field name="remaining_duration" />
 					</group>
@@ -197,6 +200,7 @@
 				<form string="Software">
 					<group string="Project Information">
 					  <field name="project_id"/>
+					  <field name="x_process_type" invisible="1"/>
 					  <field name="project_complexity" />
 					  <field name="remaining_duration" />
 					</group>
@@ -257,6 +261,7 @@
 				<form string="TPL">
 					<group string="Project Information">
 					  <field name="project_id"/>
+					  <field name="x_process_type" invisible="1"/>
 					  <field name="project_complexity" />
 					  <field name="remaining_duration" />
 					</group>
